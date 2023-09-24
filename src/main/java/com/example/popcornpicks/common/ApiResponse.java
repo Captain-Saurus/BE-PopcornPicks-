@@ -9,8 +9,8 @@ import java.time.LocalDateTime;
 @Getter
 @AllArgsConstructor
 public class ApiResponse<T> {
-    private T data;
     private Meta meta;
+    private T data;
 
     @AllArgsConstructor
     @Getter

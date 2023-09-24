@@ -4,7 +4,7 @@ import lombok.Data;
 
 import java.util.List;
 @Data
-public class DailyBoxOfficeDto {
+public class DailyBoxOffice {
 
     @Data
     public static class Request {
