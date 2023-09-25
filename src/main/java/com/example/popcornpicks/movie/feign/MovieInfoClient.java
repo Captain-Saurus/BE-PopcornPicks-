@@ -1,7 +1,7 @@
 package com.example.popcornpicks.movie.feign;
 
-import com.example.popcornpicks.movie.domain.KobisCommonResponse;
-import com.example.popcornpicks.movie.domain.DailyBoxOffice;
+import com.example.popcornpicks.movie.feign.domain.KobisCommonResponse;
+import com.example.popcornpicks.movie.feign.domain.DailyBoxOffice;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.cloud.openfeign.SpringQueryMap;
 import org.springframework.web.bind.annotation.GetMapping;
