@@ -1,9 +1,12 @@
 server:
-  port: 8081
+  port: 3000
 
 spring:
+  h2:
+    console:
+      enabled: true
   datasource:
-    url: jdbc:h2:tcp://localhost/~/test
+    url: jdbc:h2:~/popcorn
     driver-class-name: org.h2.Driver
     username: sa
     password:
