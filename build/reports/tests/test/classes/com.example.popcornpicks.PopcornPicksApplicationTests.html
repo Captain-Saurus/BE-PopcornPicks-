@@ -79,7 +79,7 @@
 <a name="contextLoads()"></a>
 <h3 class="failures">contextLoads()</h3>
 <span class="code">
-<pre>java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@1186374c testClass = com.example.popcornpicks.PopcornPicksApplicationTests, locations = [], classes = [com.example.popcornpicks.PopcornPicksApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@30af5b6b, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@42039326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@63787180, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7ca20101, org.springframework.boot.test.context.SpringBootTestAnnotation@c23eaad8], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+<pre>java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@2a7bc16b testClass = com.example.popcornpicks.PopcornPicksApplicationTests, locations = [], classes = [com.example.popcornpicks.PopcornPicksApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@30af5b6b, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@42039326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@63787180, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7ca20101, org.springframework.boot.test.context.SpringBootTestAnnotation@c23eaad8], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:143)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
 	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
@@ -241,8 +241,8 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>00:05:29.521 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.popcornpicks.PopcornPicksApplicationTests]: PopcornPicksApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-00:05:29.556 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.popcornpicks.PopcornPicksApplication for test class com.example.popcornpicks.PopcornPicksApplicationTests
+<pre>00:55:12.175 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.popcornpicks.PopcornPicksApplicationTests]: PopcornPicksApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+00:55:12.213 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.popcornpicks.PopcornPicksApplication for test class com.example.popcornpicks.PopcornPicksApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -252,19 +252,19 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.3)
 
-2023-10-09T00:05:29.703+09:00  INFO 18852 --- [    Test worker] c.e.p.PopcornPicksApplicationTests       : Starting PopcornPicksApplicationTests using Java 17.0.8 with PID 18852 (started by merry_01 in /Users/merry_01/IdeaProjects/PopcornPicks)
-2023-10-09T00:05:29.704+09:00  INFO 18852 --- [    Test worker] c.e.p.PopcornPicksApplicationTests       : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2023-10-09T00:05:29.942+09:00  INFO 18852 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-09T00:05:29.961+09:00  INFO 18852 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interfaces.
-2023-10-09T00:05:30.018+09:00  INFO 18852 --- [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bd459f05-1b6a-3ff5-8c3e-29b97cd9f710
-2023-10-09T00:05:30.050+09:00  INFO 18852 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'com.example.popcornpicks.movie.feign.MovieInfoClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-10-09T00:05:30.113+09:00  INFO 18852 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-09T00:05:30.129+09:00  INFO 18852 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
-2023-10-09T00:05:30.130+09:00  INFO 18852 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-09T00:05:30.178+09:00  INFO 18852 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-09T00:05:30.223+09:00  INFO 18852 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-09T00:05:30.228+09:00  INFO 18852 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-09T00:05:31.277+09:00 ERROR 18852 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+2023-10-09T00:55:12.396+09:00  INFO 22963 --- [    Test worker] c.e.p.PopcornPicksApplicationTests       : Starting PopcornPicksApplicationTests using Java 17.0.8 with PID 22963 (started by merry_01 in /Users/merry_01/IdeaProjects/PopcornPicks)
+2023-10-09T00:55:12.397+09:00  INFO 22963 --- [    Test worker] c.e.p.PopcornPicksApplicationTests       : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-10-09T00:55:12.642+09:00  INFO 22963 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-09T00:55:12.663+09:00  INFO 22963 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
+2023-10-09T00:55:12.726+09:00  INFO 22963 --- [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bd459f05-1b6a-3ff5-8c3e-29b97cd9f710
+2023-10-09T00:55:12.763+09:00  INFO 22963 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'com.example.popcornpicks.movie.feign.MovieInfoClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-09T00:55:12.830+09:00  INFO 22963 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-09T00:55:12.847+09:00  INFO 22963 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-10-09T00:55:12.847+09:00  INFO 22963 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-09T00:55:12.896+09:00  INFO 22963 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-09T00:55:12.940+09:00  INFO 22963 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-09T00:55:12.947+09:00  INFO 22963 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-09T00:55:13.993+09:00 ERROR 22963 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
 
 org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database may be already in use: &quot;/Users/merry_01/popcorn.mv.db&quot;. Possible solutions: close all other connection(s); use the server mode [90020-214]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678) ~[h2-2.1.214.jar:2.1.214]
@@ -423,7 +423,7 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Users/merry_01/
 	at org.h2.mvstore.db.Store.&lt;init&gt;(Store.java:136) ~[h2-2.1.214.jar:2.1.214]
 	... 142 common frames omitted
 
-2023-10-09T00:05:31.288+09:00  WARN 18852 --- [    Test worker] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2023-10-09T00:55:14.004+09:00  WARN 22963 --- [    Test worker] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
 org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database may be already in use: &quot;/Users/merry_01/popcorn.mv.db&quot;. Possible solutions: close all other connection(s); use the server mode [90020-214]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678) ~[h2-2.1.214.jar:2.1.214]
@@ -582,12 +582,12 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Users/merry_01/
 	at org.h2.mvstore.db.Store.&lt;init&gt;(Store.java:136) ~[h2-2.1.214.jar:2.1.214]
 	... 142 common frames omitted
 
-2023-10-09T00:05:31.295+09:00 ERROR 18852 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
-2023-10-09T00:05:31.296+09:00  WARN 18852 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
-2023-10-09T00:05:31.308+09:00  INFO 18852 --- [    Test worker] .s.b.a.l.ConditionEvaluationReportLogger : 
+2023-10-09T00:55:14.009+09:00 ERROR 22963 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+2023-10-09T00:55:14.010+09:00  WARN 22963 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+2023-10-09T00:55:14.021+09:00  INFO 22963 --- [    Test worker] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-10-09T00:05:31.317+09:00 ERROR 18852 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
+2023-10-09T00:55:14.031+09:00 ERROR 22963 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.11.jar:6.0.11]
@@ -725,9 +725,9 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
 	... 122 common frames omitted
 
-2023-10-09T00:05:31.323+09:00 ERROR 18852 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.example.popcornpicks.PopcornPicksApplicationTests@42cc5460]
+2023-10-09T00:55:14.038+09:00 ERROR 22963 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.example.popcornpicks.PopcornPicksApplicationTests@1186374c]
 
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@1186374c testClass = com.example.popcornpicks.PopcornPicksApplicationTests, locations = [], classes = [com.example.popcornpicks.PopcornPicksApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@30af5b6b, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@42039326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@63787180, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7ca20101, org.springframework.boot.test.context.SpringBootTestAnnotation@c23eaad8], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@2a7bc16b testClass = com.example.popcornpicks.PopcornPicksApplicationTests, locations = [], classes = [com.example.popcornpicks.PopcornPicksApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@30af5b6b, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@42039326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@63787180, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7ca20101, org.springframework.boot.test.context.SpringBootTestAnnotation@c23eaad8], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:143) ~[spring-test-6.0.11.jar:6.0.11]
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127) ~[spring-test-6.0.11.jar:6.0.11]
 	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.0.11.jar:6.0.11]
@@ -916,7 +916,7 @@ Unconditional classes:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.2.1</a> at Oct 9, 2023, 12:05:31 AM</p>
+<a href="http://www.gradle.org">Gradle 8.2.1</a> at Oct 9, 2023, 12:55:14 AM</p>
 </div>
 </div>
 </body>
