@@ -7,8 +7,7 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public class MovieDto {
-
     private final String movieCd;
     private final String movieNm;
-
+    private final String openDt;
 }

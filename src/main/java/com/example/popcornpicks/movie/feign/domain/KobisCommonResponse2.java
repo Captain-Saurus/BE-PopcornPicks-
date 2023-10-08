@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.Objects;
 
+// 영화 리스트
 @Data
 public class KobisCommonResponse2 {
 

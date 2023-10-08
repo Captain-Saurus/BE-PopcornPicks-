@@ -86,29 +86,29 @@ public class Movie {
         private String prdStatNm;
 
         /**
-         *
+         * 제작국가(전체)
          */
         private String nationAlt;
 
         /**
-         *
+         * 영화장르(전체)
          */
         private String genreAlt;
 
         /**
-         *
+         * 대표 제작국가명
          */
         private String repNationNm;
 
         /**
-         *
+         * 대표 장르명
          */
         private String repGenreNm;
 
-        // 감독, 회사 ..
+        // + 감독, 회사
 
         public MovieDto toResponse(){
-            return new MovieDto(this.movieCd, this.movieNm);
+            return new MovieDto(this.movieCd, this.movieNm, this.openDt);
         }
     }
 

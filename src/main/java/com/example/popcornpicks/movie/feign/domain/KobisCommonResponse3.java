@@ -7,11 +7,12 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.Objects;
 
-// 일별 박스오피스
+// 영화 상세정보
 @Data
-public class KobisCommonResponse<T> {
+public class KobisCommonResponse3 {
 
-    @Nullable private T boxOfficeResult;
+    @Nullable private MovieInfo.Response movieInfoResult;
+
 
     @Nullable private Error faltInfo;
 
@@ -23,6 +24,6 @@ public class KobisCommonResponse<T> {
     }
 
     public boolean isSuccess() {
-        return Objects.nonNull(boxOfficeResult) && Objects.isNull(faltInfo);
+        return Objects.nonNull(movieInfoResult) && Objects.isNull(faltInfo);
     }
 }
