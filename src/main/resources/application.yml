@@ -1,6 +1,5 @@
 server:
   port: 3000
-  address: 172.31.33.209
 
 spring:
   h2:
