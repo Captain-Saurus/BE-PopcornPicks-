@@ -17,6 +17,10 @@ configurations {
     }
 }
 
+jar {
+    enabled = false
+}
+
 ext {
     set('springCloudVersion', "2022.0.3")
 }
