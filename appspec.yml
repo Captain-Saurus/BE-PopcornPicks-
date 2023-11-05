@@ -5,6 +5,7 @@ files:
 #    destination: /home/ubuntu/github_actions
     destination: /home/ec2-user/BE-PopcornPicks-
     overwrite: yes
+file_exists_behavior: OVERWRITE
 
 permissions:
   - object: /
