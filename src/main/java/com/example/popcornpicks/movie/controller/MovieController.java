@@ -2,8 +2,6 @@ package com.example.popcornpicks.movie.controller;
 
 import com.example.popcornpicks.common.ApiResponse;
 import com.example.popcornpicks.movie.domain.DailyBoxOfficeMovieDto;
-import com.example.popcornpicks.movie.feign.domain.DailyBoxOffice;
-import com.example.popcornpicks.movie.feign.domain.KobisCommonResponse;
 import com.example.popcornpicks.movie.service.MovieService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
