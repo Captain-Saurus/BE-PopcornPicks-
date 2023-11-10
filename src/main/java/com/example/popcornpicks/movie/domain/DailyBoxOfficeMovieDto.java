@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class DailyBoxOfficeMovieDto {
     private final int rank;
-    private final String movieImage;
+    private final String movieImageUrl;
     private final String movieName;
-    private final String score;
+    private final String rankAdjustment;
 }

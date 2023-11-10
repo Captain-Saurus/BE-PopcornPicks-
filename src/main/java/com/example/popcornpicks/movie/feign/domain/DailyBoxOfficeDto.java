@@ -10,9 +10,9 @@ import java.util.stream.Collectors;
  * @Docs https://www.kobis.or.kr/kobisopenapi/homepg/apiservice/searchServiceInfo.do
  */
 @Data
-public class DailyBoxOffice {
+public class DailyBoxOfficeDto {
 
-    private static final int SHOW_MOVIE_COUNT = 5;
+
 
     @Data
     public static class Request {
@@ -51,11 +51,9 @@ public class DailyBoxOffice {
          */
         private List<Detail> dailyBoxOfficeList;
 
-
-        public List<DailyBoxOfficeMovieDto> makeDailyBoxOfficeMovieDto() {
+        public List<Detail> getTopNDailyBoxOfficeList(int n) {
             return dailyBoxOfficeList.stream()
-                    .filter(vo -> Integer.parseInt(vo.getRank()) <= SHOW_MOVIE_COUNT)
-                    .map(Detail::toResponse)
+                    .filter(vo -> Integer.parseInt(vo.getRank()) <= n)
                     .collect(Collectors.toList());
         }
     }
@@ -156,12 +154,12 @@ public class DailyBoxOffice {
         private String showCnt;
 
 
-        public DailyBoxOfficeMovieDto toResponse() {
+        public DailyBoxOfficeMovieDto toResponse(String movieImageUrl) {
             return new DailyBoxOfficeMovieDto(
                 Integer.parseInt(this.rank),
-                "", // TODO: 영화 값 내려오지 않음 -> 기획 확인 필요
+                movieImageUrl,
                 this.movieNm,
-                this.audiAcc   // TODO: 별점 대신 정확한 기준값 정의 필요 -> 기획 확인 필요
+                this.rankInten
             );
         }
     }
