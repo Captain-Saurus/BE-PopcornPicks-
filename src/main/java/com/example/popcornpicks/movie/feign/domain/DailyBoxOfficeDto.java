@@ -56,6 +56,12 @@ public class DailyBoxOfficeDto {
                     .filter(vo -> Integer.parseInt(vo.getRank()) <= n)
                     .collect(Collectors.toList());
         }
+
+        public List<String> getTop5DailyBoxOfficeMovieNameList() {
+            return getTopNDailyBoxOfficeList(5).stream()
+                    .map(Detail::getMovieNm)
+                    .collect(Collectors.toList());
+        }
     }
 
     @Data
