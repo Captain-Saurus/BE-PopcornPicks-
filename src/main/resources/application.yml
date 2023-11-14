@@ -6,7 +6,7 @@ spring:
     console:
       enabled: true
   datasource:
-    url: jdbc:h2:~/popcorn
+    url: jdbc:h2:~/popcorn;AUTO_SERVER=true
     driver-class-name: org.h2.Driver
     username: sa
     password:
@@ -23,3 +23,8 @@ kmdb:
   url: https://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json3.jsp
   collection: kmdb_new2
   serviceKey: 8VWF4U07N5R1DB11Q12V
+youtube:
+  url: https://www.googleapis.com
+  key: AIzaSyD6QU8KkpVy2-gDJVc2H3JOciGL8LsWDPk
+  part: snippet
+  type: video
